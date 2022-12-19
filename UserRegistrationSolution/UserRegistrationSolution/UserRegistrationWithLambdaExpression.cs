@@ -10,6 +10,7 @@ namespace UserRegistrationSolution
     internal class UserRegistrationWithLambdaExpression
     {
         const string FIRST_NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
-        public bool RegexCheck(string firstName) => (Regex.IsMatch(firstName, FIRST_NAME_PATTERN)) ? true : false;
+        const string LAST_NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
+        public bool RegexCheck(string firstName, string lastName) => (Regex.IsMatch(firstName, FIRST_NAME_PATTERN) && Regex.IsMatch(lastName, LAST_NAME_PATTERN)) ? true : false;
     }
 }
